@@ -93,71 +93,44 @@
                 return false;
 			});
 		});
-
 	</script>
 </head>
 
 <body>
     <div id="container">
-	<h1>TinyColor</h1>
-	<h2>Fast, small color manipulation and conversion for JavaScript</h2>
-
-	<p>
-	   <a href="https://github.com/bgrins/TinyColor">TinyColor</a> is a micro framework for inputting colors and outputting colors as different formats.
-	   Input is meant to be as permissive as possible.
-  </p>
-
-	<h3>Usage Documentation</h3>
-	<p>Read all the documentation on the <a href='https://github.com/bgrins/TinyColor'>TinyColor project page</a> on github.</p>
-
-	<h3>Code</h3>
-	<p><a href='docs/tinycolor.html'>View the annotated source code</a> or <a href='https://github.com/bgrins/TinyColor/blob/master/tinycolor.js'>see the full source on github</a>.</p>
-
-	<h3>Tests</h3>
-	<p><a href='test/'>View the QUnit Tests</a>.</p>
-
-	<h3>Demo</h3>
 	<div id='demo'>
 	<div id='inputter'>
         <p>
-            Enter a color: <input type="text" placeholder="any color." id='color' />
+            Enter a color: <input type="text" placeholder="any color. in several formats" id='color' />
         </p>
-	    <p>
+	    <!--<p>
 	       Or try these:
 	           <a href="#">red</a>
 	           <a href="#">0f0</a>
 	           <a href="#">rgb 255 128 128</a>
 	           <a href='#'>hsl(0, 100%, 50%)</a>
 	           <a href='#'>hsv 0, 100%, 50%</a>
-	   </p>
+	   </p>-->
 	   <p>And I'll tell you what I know about it:</p>
 	</div>
 
-	<pre id='code-output'></pre>
+	<pre id='code-output'></pre><!--Where is the code that generates this?-->
 
 	<div id='filter-output'>
 	   <table>
 	       <tr>
 	           <th>Lighten</th>
-	           <td><div class='lighten'></div></td>
-	       </tr>
-	       <tr>
+	           <td><div class='lighten'></div></td><!--extract color from here-->
 	           <th>Darken</th>
 	           <td><div class='darken'></div></td>
-	       </tr>
-	       <tr>
 	           <th>Saturate</th>
 	           <td><div class='saturate'></div></td>
 	       </tr>
 	       <tr>
 	           <th>Desaturate</th>
 	           <td><div class='desaturate'></div></td>
-	       </tr>
-	       <tr>
 	           <th>Greyscale</th>
 	           <td><div class='greyscale'></div></td>
-	       </tr>
-	       <tr>
 	           <th>Brighten</th>
 	           <td><div class='brighten'></div></td>
 	       </tr>
@@ -188,20 +161,6 @@
 	   </table>
     </div>
 	</div>
-
-
-	<h3>Credit</h3>
-	<p>
-	   Developed by <a href='http://briangrinstead.com'>Brian Grinstead</a>.  Big thanks to the following places:
-	</p>
-	<ul>
-	   <li><a href='https://github.com/cloudhead/less.js/blob/master/lib/less/functions.js'>less.js</a> for some of the modification functions</li>
-	   <li><a href='https://github.com/infusion/jQuery-xcolor/blob/master/jquery.xcolor.js'>jQuery xColor</a> for some of the combination functions</li>
-	   <li><a href='http://www.w3.org/TR/css3-color/#svg-color'>w3.org</a> for the color list and parsing rules</li>
-	   <li><a href='http://mjijackson.com/2008/02/rgb-to-hsl-and-rgb-to-hsv-color-model-conversion-algorithms-in-javascript'>mjijackson.com</a> for the first stab at RGB / HSL / HSV converters</li>
-
-	</ul>
-
   </div>
 </body>
 </html>
