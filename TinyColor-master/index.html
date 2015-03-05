@@ -6,6 +6,7 @@
   <title>TinyColor - Fast, small color manipulation in JavaScript</title>
 
 	<link rel="stylesheet" href="demo/demo.css" type="text/css" media="screen" />
+	<link href='http://fonts.googleapis.com/css?family=Lato&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
 	<script type='text/javascript' src='demo/jquery-1.9.1.js'></script>
 	<script type='text/javascript' src='tinycolor.js'></script>
 	<script type='text/javascript'>
@@ -111,55 +112,28 @@
 	           <a href='#'>hsl(0, 100%, 50%)</a>
 	           <a href='#'>hsv 0, 100%, 50%</a>
 	   </p>-->
-	   <p>And I'll tell you what I know about it:</p>
+	And I'll tell you what I know about it:
 	</div>
 
-	<pre id='code-output'></pre><!--Where is the code that generates this?-->
+	<pre id='code-output' style="color:#313131; background-color:white;"></pre><!--Where is the code that generates this? ANSWER: tinycolor.js-->
 
 	<div id='filter-output'>
-	   <table>
-	       <tr>
-	           <th>Lighten</th>
-	           <td><div class='lighten'></div></td><!--extract color from here-->
-	           <th>Darken</th>
-	           <td><div class='darken'></div></td>
-	           <th>Saturate</th>
-	           <td><div class='saturate'></div></td>
-	       </tr>
-	       <tr>
-	           <th>Desaturate</th>
-	           <td><div class='desaturate'></div></td>
-	           <th>Greyscale</th>
-	           <td><div class='greyscale'></div></td>
-	           <th>Brighten</th>
-	           <td><div class='brighten'></div></td>
-	       </tr>
-	       <tr>
-	           <th>Most Readable</th>
-	           <td><div id='mostReadable'></div></td>
-	       </tr>
-	   </table>
+	           <div class='lighten' style="width:400px; height:200px;">Lighten</div>
+	           <div class='darken'style="width:400px; height:200px;">Darken</div>
+	           <div class='saturate'style="width:400px; height:200px;">Saturate</div>
+	           <div class='desaturate'style="width:400px; height:200px;">Desaturate</div>
+	           <div class='greyscale'style="width:400px; height:200px;">Greyscale</div>
+	           <div class='brighten'style="width:400px; height:200px;">Brighten</div>
+	           <div id='mostReadable'style="width:400px; height:200px;">Most Readable</div>
     </div>
-
-	<div id='combine-output'>
-	   <table>
-	       <tr>
-	           <th>Triad</th> <td><div class='triad'></div></td>
-	       </tr>
-	       <tr>
-	           <th>Tetrad</th> <td><div class='tetrad'></div></td>
-	       </tr>
-	       <tr>
-	           <th>Monochromatic</th> <td><div class='mono'></div></td>
-	       </tr>
-	       <tr>
-	           <th>Analogous</th> <td><div class='analogous'></div></td>
-	       </tr>
-	       <tr>
-	           <th>Split Complements</th> <td><div class='sc'></div></td>
-	       </tr>
-	   </table>
-    </div>
+<br>
+		<div id='combine-output'>
+			Triad<div class='triad'></div>
+			Tetrad<div class='tetrad'></div>
+			Monochromatic<div class='mono'></div>
+			Analogous<div class='analogous'></div>
+			Split Complement<td><div class='sc'></div>
+	    </div>
 	</div>
   </div>
 </body>

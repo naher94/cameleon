@@ -668,7 +668,7 @@ function monochromatic(color, results) {
 // Utility Functions
 // ---------------------
 
-tinycolor.mix = function(color1, color2, amount) {
+tinycolor.mix = function(color1, color2, amount) {//pretty sure broken
     amount = (amount === 0) ? 0 : (amount || 50);
 
     var rgb1 = tinycolor(color1).toRgb();
