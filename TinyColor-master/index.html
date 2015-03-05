@@ -57,12 +57,12 @@
 			$("#mostReadable").css("background-color",
 			     mostReadable.toHexString()
 			 );
-
+			/*what is combines?*/
 			 var combines = $("#combine-output").toggleClass("invisible", !tiny.isValid());
 
 			 function colorArrayToHTML(arr) {
 			 	return $.map(arr, function(e) {
-			     return '<span style="background:'+e.toHexString()+'"></span>'
+			     return '<div style="background:'+e.toHexString()+'"></div>'
 			 	 }).join('');
 			 }
 
@@ -112,11 +112,10 @@
 	           <a href='#'>hsl(0, 100%, 50%)</a>
 	           <a href='#'>hsv 0, 100%, 50%</a>
 	   </p>-->
-	And I'll tell you what I know about it:
+		And I'll tell you what I know about it:
 	</div>
 
-	<pre id='code-output' style="color:#313131; background-color:white;"></pre><!--Where is the code that generates this? ANSWER: tinycolor.js-->
-
+	<pre id='code-output' style="color:#313131; background-color:white;"></pre>
 	<div id='filter-output'>
 	           <div class='lighten' style="width:400px; height:200px;">Lighten</div>
 	           <div class='darken'style="width:400px; height:200px;">Darken</div>
@@ -128,11 +127,11 @@
     </div>
 <br>
 		<div id='combine-output'>
-			Triad<div class='triad'></div>
-			Tetrad<div class='tetrad'></div>
-			Monochromatic<div class='mono'></div>
-			Analogous<div class='analogous'></div>
-			Split Complement<td><div class='sc'></div>
+			<div style="float:left;">Triad</div><div class='triad'style="float:left;"></div>
+			<div style="float:left;">Tetrad</div><div class='tetrad'style="float:left;"></div>
+			<div style="float:left;">Monochromatic</div><div class='mono'style="float:left;"></div>
+			<div style="float:left;">Analogous</div><div class='analogous' style="float:left;"></div>
+			<div style="float:left;">Split Complement</div><div class='sc' style="float:left;"></div>
 	    </div>
 	</div>
   </div>
