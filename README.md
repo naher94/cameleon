@@ -1,5 +1,5 @@
-## Cameleon
-#bringing color back to color
+# Cameleon
+##bringing color back to color
 
 A color webApp being written to help create color palettes for all your needs plus much more.
 
