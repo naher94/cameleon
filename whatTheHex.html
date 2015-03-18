@@ -4,17 +4,19 @@
 		<meta charset='utf-8'>
   		<title>whatTheHex</title>
   		<link href='https://fonts.googleapis.com/css?family=Lato&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
-  		<script>
+		<script src="colorList.js"></script>
+		<script>
   		function compare(){
-  			enteredColor = document.getElementById("color").value;
+  			var enteredColor = document.getElementById("color").value;
   			console.log(enteredColor);
   		}
   		function colorRand(){
-  			index = Math.floor((Math.random() * colorList.length) + 1);
-  			$("#box").style.background = index;
+  			var index = Math.floor((Math.random() * names.length));
+  			var background = names[index][0];
+  			document.getElementById("box").style.background = "#"+names[index][0];
   		}
 
-  		
+
   		</script>
 	</head>
 	

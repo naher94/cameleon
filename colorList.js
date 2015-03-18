@@ -1,11 +1,7 @@
 
   // adopted from: Farbtastic 1.2
   // http://acko.net/dev/farbtastic
-  rgb: function(color) {
-    return [parseInt('0x' + color.substring(1, 3)), parseInt('0x' + color.substring(3, 5)),  parseInt('0x' + color.substring(5, 7))];
-  },
-
-  names: [
+var names = [
 ["000000", "Black"],
 ["000080", "Navy Blue"],
 ["0000C8", "Dark Blue"],
@@ -1573,7 +1569,5 @@
 ["FFFFF0", "Ivory"],
 ["FFFFFF", "White"]
 ]
-
-}
 
 
