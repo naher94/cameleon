@@ -1,5 +1,27 @@
 #color {
-	
-	border-radius: 10px;
-	height: 100px;
+	height: 50px;
+	width: 200px;
+	border-radius: 50px;
+	border: 2px solid #ffffff;
+	/*padding:100px;*/
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin-top: -50px;
+	margin-left: -100px;
+	text-align: center;
+	font-size: 15px;
+	color: #a9a9a9;
+
 }
+
+input:focus {
+	outline: none;
+}
+
+/*.box {
+	height: auto;
+	width: 100%;
+}
+
+refresh button?
