@@ -7,24 +7,32 @@
   		<link rel="stylesheet" type="text/css" href="style.css">
 		<script src="colorList.js"></script>
 		<script>
-  		function compare(){
-  			var enteredColor = document.getElementById("color").value;
+		var enteredColor;
+		var background;
+  		function readText(){
+  			enteredColor = document.getElementById("color").value;
   			console.log(enteredColor);
   		}
   		function colorRand(){
   			var index = Math.floor((Math.random() * names.length));
-  			var background = names[index][0];
+  			background = names[index][0];
   			document.getElementById("box").style.background = "#"+names[index][0];
+  			console.log(background);
   		}
 
-
+  		function compare(){
+  			if (background==enteredColor) {
+  				console.log("coolsies");
+  			};
+  		}
   		</script>
 	</head>
 	
 
 	<body style="width:100%; height:600px; padding:0px; margin:0px;"><!--Make responsive-->
 		<div id="box" style="width:100%; height:100%;">
-			<input type="text" placeholder="whatTheHex?" id="color" onkeydown="compare()"/>
+			<input type="text" placeholder="whatTheHex?" id="color" onkeydown="readText()" maxlength="6" />
+
 			<script> colorRand(); </script>
 		</div>
 
