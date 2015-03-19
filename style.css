@@ -2,7 +2,7 @@
 	height: 50px;
 	width: 200px;
 	border-radius: 50px;
-	border: 2px solid #ffffff;
+	border: 10px solid #313131; /*Make the current color entered the color of the border*/
 	/*padding:100px;*/
 	position: absolute;
 	top: 50%;
