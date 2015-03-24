@@ -37,6 +37,9 @@ $(function(){
         case '5':
             imageSrc = 'images/colorwheel5.png';
             break;
+        case '6':
+            imageSrc = 'images/coral.JPG';
+            break;
     }
     image.src = imageSrc;
 
@@ -68,8 +71,6 @@ $(function(){
     $('#picker').click(function(e) { // click event handler
         bCanPreview = !bCanPreview;
     }); 
-    $('.preview').click(function(e) { // preview click
-        $('.colorpicker').fadeToggle("slow", "linear");
-        bCanPreview = true;
-    });
+    $('.colorpicker').fadeToggle("slow", "linear");
+    bCanPreview = true;
 });
