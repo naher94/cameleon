@@ -6,28 +6,7 @@
   		<link href='https://fonts.googleapis.com/css?family=Lato&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
   		<link rel="stylesheet" type="text/css" href="style.css">
 		<script src="colorList.js"></script>
-		<script>
-		var enteredColor;
-		var background;
-  		function readText(){
-  			enteredColor = document.getElementById("color").value;
-  			console.log(enteredColor);
-  		}
-  		function colorRand(){
-  			var index = Math.floor((Math.random() * names.length));
-  			background = names[index][0];
-  			document.getElementById("box").style.background = "#"+names[index][0];
-  			console.log(background);
-  		}
-
-  		function compare(){
-  			console.log(background.toUpperCase());
-  			console.log(enteredColor);
-  			if (background.toUpperCase()==enteredColor) {
-  				console.log("coolsies");
-  			};
-  		}
-  		</script>
+		<script src="whatTheHex.js"></script>
 	</head>
 	
 
