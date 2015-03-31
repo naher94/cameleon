@@ -4,3 +4,11 @@
 	border-radius:50%;
 	background-color: #313131;
 }
+#wheel{
+	width: 500px;
+	height: 500px;
+}
+
+#rotate{
+	background-color: #313131;
+}
