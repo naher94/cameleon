@@ -2,5 +2,12 @@
 	width: 50px;
 	height: 50px;
 	border-radius:50%;
-	
+}
+#wheel{
+	width: 500px;
+	height: 500px;
+}
+
+#rotate{
+	background-color: #313131;
 }
