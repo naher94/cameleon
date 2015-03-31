@@ -6,5 +6,7 @@ var background;
   			console.log(background);
   		}
       function rotateBox(){
-        document.getElementById("rotate").style.width = document.getElementById("wheel").style.width/2;
+      	var w = document.getElementById("wheel").style.width;
+        document.getElementById("rotate").style.width = w/2;
+        console.log(document.getElementById("rotate").style.width);
       }
