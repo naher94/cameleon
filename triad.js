@@ -5,3 +5,6 @@ var background;
   			document.getElementById("circle").style.background = "#"+names[index][0];
   			console.log(background);
   		}
+      function rotateBox(){
+        document.getElementById("rotate").style.width = document.getElementById("wheel").style.width/2;
+      }
