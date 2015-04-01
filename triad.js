@@ -5,7 +5,7 @@ var background;
   		var index = Math.floor((Math.random() * names.length));
   		background = names[index][0];
   		document.getElementById("circle").style.background = "#"+names[index][0];
-  		//console.log(background);
+  		return background;
   	}
       function rotateBox()
       {
@@ -25,15 +25,20 @@ var background;
       		$(arr[i]).css("width",w/2)
       		$("#wheel").append(arr[i]);
       	};
+
       	var sel = new Array(5,10,11,12,13,14,16,17,18,19,0);
+      	var master = 5;
+
       	for (var i = 0; i <= arr.length - 1; i++) 
       	{
       		if(!isIn(i,sel))
       		{
-      			$(arr[i]).css("background-color","#000000")
+      			$(arr[i]).children().css("background-color","#ffffff")//Props to Nahyung!
       		}
       	};
+      	$(arr[master]).children().css("background-color",colorRand())
       }
+
       function isIn (i,sel) 
       {
       	for (var q = 0; q <= sel.length - 1; q++)
