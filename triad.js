@@ -37,6 +37,9 @@ var background;
       		}
       	};
       	$(arr[master]).children().css("background-color",colorRand())
+      	$(arr[master]).children().css("width",100)
+      	$(arr[master]).children().css("height",100)
+
       }
 
       function isIn (i,sel) 
