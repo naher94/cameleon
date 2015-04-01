@@ -4,12 +4,21 @@
 	border-radius:50%;
 }
 #wheel{
+	position: relative;
 	width: 500px;
 	height: 500px;
 	background-color: #ff0000;
 }
 
 #rotate{
+	position: absolute;
+  	top: 50%;
 	background-color: #313131;
 	float: left;
+
+    -webkit-transform-origin: 100% 50%;
+	-moz-transform-origin: 100% 50%;
+	-ms-transform-origin: 100% 50%;
+	-o-transform-origin: 100% 50%;
+	transform-origin: 100% 50%;
 }
