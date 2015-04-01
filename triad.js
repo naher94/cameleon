@@ -22,10 +22,23 @@ var background;
       		console.log(arr[i]);
       		$(arr[i]).append(cir);
       		$(arr[i]).css("rotate",(360/arr.length)*i);
-      		      		//should be able to simplify using a class rather than ID (Since Constant)
       		$(arr[i]).css("width",w/2)
-      		      		//should be able to simplify using a class rather than ID (Since Constant)
-
       		$("#wheel").append(arr[i]);
       	};
+      	var sel = new Array(5,10,11,12,13,14,16,17,18,19,0);
+      	for (var i = 0; i <= arr.length - 1; i++) 
+      	{
+      		if(!isIn(i,sel))
+      		{
+      			$(arr[i]).css("background-color","#000000")
+      		}
+      	};
+      }
+      function isIn (i,sel) 
+      {
+      	for (var q = 0; q <= sel.length - 1; q++)
+      	{ 
+      		if (sel[q]==i) {return true};
+      	};
+      	return false;
       }
