@@ -17,7 +17,7 @@ var background;
       	{
       		var elem = document.createElement('div');
       		var cir = document.createElement('div');
-      		$(cir).css("background-color","#00ff00")
+      		cir.setAttribute("id","circle");
       		elem.setAttribute("id", "rotate");
       		arr[i] = elem;
       		console.log(arr[i]);
