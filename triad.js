@@ -25,18 +25,19 @@ var background;
       		$(arr[i]).css("width",w/2)
       		$("#wheel").append(arr[i]);
       	};
-
-      	var sel = new Array(5,10,11,12,13,14,16,17,18,19,0);
+//1,2,3,4,6,7,8,9,15
+      	var sel = new Array(0,10,11,12,13,14,16,17,18,19);
       	var master = 5;
+      
 
       	for (var i = 0; i <= arr.length - 1; i++) 
       	{
-      		if(!isIn(i,sel))
+      		if(isIn(i,sel))
       		{
-      			$(arr[i]).children().css("background-color","#ffffff")//Props to Nahyung!
+      			$(arr[i]).children().css("background-color",colorRand())
       		}
       	};
-      	$(arr[master]).children().css("background-color",colorRand())
+      	$(arr[master]).children().css ("background-color",colorRand())
       	$(arr[master]).children().css("width",100)
       	$(arr[master]).children().css("height",100)
 
