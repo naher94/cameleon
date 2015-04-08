@@ -34,10 +34,12 @@ var background;
       	{
       		if(isIn(i,sel))
       		{
-      			$(arr[i]).children().css("background-color",colorRand())
+      			$(arr[i]).children().css("background-color","#ff0000")
       		}
       	};
-      	$(arr[master]).children().css ("background-color",colorRand())
+        var masterColor = colorRand();
+        var triadArray = tinycolor.triad(masterColor);//typeError
+      	$(arr[master]).children().css ("background-color",masterColor)
       	$(arr[master]).children().css("width",100)
       	$(arr[master]).children().css("height",100)
 
