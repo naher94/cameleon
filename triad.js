@@ -25,7 +25,7 @@ var background;
       		$(arr[i]).css("width",w/2)
       		$("#wheel").append(arr[i]);
       	};
-//1,2,3,4,6,7,8,9,15
+        
       	var sel = new Array(0,10,11,12,13,14,16,17,18,19);
       	var master = 5;
       
