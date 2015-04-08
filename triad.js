@@ -25,7 +25,7 @@ var background;
       		$(arr[i]).css("width",w/2)
       		$("#wheel").append(arr[i]);
       	};
-        
+
       	var sel = new Array(0,10,11,12,13,14,16,17,18,19);
       	var master = 5;
       
@@ -37,9 +37,13 @@ var background;
       			$(arr[i]).children().css("background-color",colorRand())
       		}
       	};
-      	$(arr[master]).children().css ("background-color",colorRand())
+        var masterColor = colorRand();
+        var triadArray = triad(masterColor);
+        console.log(triadArray);
+      	$(arr[master]).children().css ("background-color",masterColor)
       	$(arr[master]).children().css("width",100)
       	$(arr[master]).children().css("height",100)
+
 
       }
 
