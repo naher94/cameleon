@@ -7,7 +7,7 @@ var background;
   		document.getElementById("circle").style.background = "#"+names[index][0];
   		return background;
   	}
-      function rotateBox()
+    function rotateBox()
       {
       	var w = $('#wheel').width()
       	/*$('#rotate').css("rotate","90")*/
@@ -38,12 +38,7 @@ var background;
       		}
       	};
         var masterColor = colorRand();
-<<<<<<< HEAD
-        var triadArray = tinycolor.triad(masterColor);//typeError
-=======
-        var triadArray = triad(masterColor);
-        console.log(triadArray);
->>>>>>> origin/gh-pages
+        var triadArray = tinycolor(masterColor).triad();
       	$(arr[master]).children().css ("background-color",masterColor)
       	$(arr[master]).children().css("width",100)
       	$(arr[master]).children().css("height",100)
