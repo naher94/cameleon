@@ -57,9 +57,10 @@ var background;
         var leftIndex = Math.floor(Math.random() * (leftArr.length - 0)) + 0;
         var rightIndex = Math.floor(Math.random() * (rightArr.length - 0)) + 0;
 
+        $(arr[leftArr[leftIndex]]).children().attr('id','leftAns');
+        $(arr[rightArr[rightIndex]]).children().attr('id','rightAns');
         $(arr[leftArr[leftIndex]]).children().css("background-color",left);//16 - 19 & 0
         $(arr[rightArr[rightIndex]]).children().css("background-color",right);//10 - 14
-
         console.log("Left INDEX: "+leftIndex);//should not be higher than 4 (0-4)
         console.log("Right INDEX: "+rightIndex);
         console.log("Answer Left (Div #): "+leftArr[leftIndex]);
@@ -94,6 +95,7 @@ var background;
             counter++;
           }
         };
+
       }
 
       function isIn (i,sel) 
