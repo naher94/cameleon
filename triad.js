@@ -7,6 +7,12 @@ var background;
   		document.getElementById("circle").style.background = "#"+names[index][0];
   		return background;
   	}
+    function colorRandNum()
+    {
+      var index = Math.floor((Math.random() * names.length));
+      background = names[index][0];
+      return background;
+    }
     function rotateBox()
       {
       	var w = $('#wheel').width()
@@ -47,13 +53,47 @@ var background;
         var left = triadArray[1].toHexString();
         var right = triadArray[2].toHexString();
 
-        //Returns a random integer between min (inclusive) and max (inclusive)
-        var leftIndex = Math.floor(Math.random() * (leftArr.length - 0 + 1)) + 0;
-        var rightIndex = Math.floor(Math.random() * (rightArr.length - 0 + 1)) + 0;
-        console.log(leftIndex);
-        $(arr[leftArr[leftIndex]]).children().css("background-color",left)//16 - 19 & 0
-        $(arr[rightArr[leftIndex]]).children().css("background-color",right)//10 - 14
+        //Returns a random integer between min (inclusive) and max (exclusive)
+        var leftIndex = Math.floor(Math.random() * (leftArr.length - 0)) + 0;
+        var rightIndex = Math.floor(Math.random() * (rightArr.length - 0)) + 0;
 
+        $(arr[leftArr[leftIndex]]).children().css("background-color",left);//16 - 19 & 0
+        $(arr[rightArr[rightIndex]]).children().css("background-color",right);//10 - 14
+
+        console.log("Left INDEX: "+leftIndex);//should not be higher than 4 (0-4)
+        console.log("Right INDEX: "+rightIndex);
+        console.log("Answer Left (Div #): "+leftArr[leftIndex]);
+        console.log("Answer Right (Div #): "+rightArr[rightIndex]);
+
+        var leftOther = new Array(4);
+        var rightOther = new Array(4);
+        for (var i = 0; i <= 4; i++)
+        {
+          leftOther[i] = colorRandNum();
+          rightOther[i] = colorRandNum();
+        }
+        //var leftOther = tinycolor(left).analogous(4,25);
+        //var rightOther = tinycolor(right).analogous(4,35);
+
+        var counter = 0;//separate var to fix off my one when "if" is not executed
+        for (var i = 0; i<= leftArr.length; i++)
+        {
+          if (leftArr[leftIndex] != leftArr[i]) 
+          {
+            $(arr[leftArr[i]]).children().css("background-color",leftOther[counter])
+            counter++;
+          }
+        };
+
+        counter = 0;
+        for (var i = 0; i<= rightArr.length; i++)
+        {
+          if (rightArr[rightIndex] != rightArr[i]) 
+          {
+            $(arr[rightArr[i]]).children().css("background-color",rightOther[counter])
+            counter++;
+          }
+        };
       }
 
       function isIn (i,sel) 
