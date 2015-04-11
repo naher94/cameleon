@@ -19,7 +19,7 @@ var background;
       		cir.setAttribute("id","circle");
       		elem.setAttribute("id", "rotate");
       		arr[i] = elem;
-      		console.log(arr[i]);
+      		//console.log(arr[i]);
       		$(arr[i]).append(cir);
       		$(arr[i]).css("rotate",(360/arr.length)*i);
       		$(arr[i]).css("width",w/2)
@@ -27,6 +27,8 @@ var background;
       	};
 
       	var sel = new Array(0,10,11,12,13,14,16,17,18,19);
+        var leftArr = new Array(16,17,18,19,0);
+        var rightArr = new Array(10,11,12,13,14);
       	var master = 5;
       
 
@@ -38,11 +40,19 @@ var background;
       		}
       	};
         var masterColor = colorRand();
-        var triadArray = tinycolor(masterColor).triad();
+        var triadArray = tinycolor(masterColor).triad();//returns array [original,left,right]
       	$(arr[master]).children().css ("background-color",masterColor)
       	$(arr[master]).children().css("width",100)
       	$(arr[master]).children().css("height",100)
+        var left = triadArray[1].toHexString();
+        var right = triadArray[2].toHexString();
 
+        //Returns a random integer between min (inclusive) and max (inclusive)
+        var leftIndex = Math.floor(Math.random() * (leftArr.length - 0 + 1)) + 0;
+        var rightIndex = Math.floor(Math.random() * (rightArr.length - 0 + 1)) + 0;
+        console.log(leftIndex);
+        $(arr[leftArr[leftIndex]]).children().css("background-color",left)//16 - 19 & 0
+        $(arr[rightArr[leftIndex]]).children().css("background-color",right)//10 - 14
 
       }
 
