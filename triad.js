@@ -60,7 +60,15 @@ var background;
         $(arr[leftArr[leftIndex]]).children().attr('id','leftAns');
         $(arr[rightArr[rightIndex]]).children().attr('id','rightAns');
         $(arr[leftArr[leftIndex]]).children().css("background-color",left);//16 - 19 & 0
+<<<<<<< Updated upstream
         $(arr[rightArr[rightIndex]]).children().css("background-color",right);//10 - 14
+=======
+        $(arr[rightArr[rightIndex]]).children().css("background-color",right);
+
+        $(arr[leftArr[leftIndex]]).children().attr('id','leftAns');//16 - 19 & 0
+        $(arr[rightArr[rightIndex]]).children().attr('id','rightAns');//10 - 14
+        
+>>>>>>> Stashed changes
         console.log("Left INDEX: "+leftIndex);//should not be higher than 4 (0-4)
         console.log("Right INDEX: "+rightIndex);
         console.log("Answer Left (Div #): "+leftArr[leftIndex]);
@@ -96,7 +104,9 @@ var background;
           }
         };
 
+
       }
+
 
       function isIn (i,sel) 
       {
