@@ -147,5 +147,6 @@ function clickHandler() {
 $(function() {
   makeColorWheel();
   colorize(arr,leftArr,rightArr,master);
+  $(".score").text(0);
   $('.circle').click(clickHandler);
 })
