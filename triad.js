@@ -121,19 +121,19 @@ function clickHandler() {
   var myId = $(this).attr("id")
 
   if (myId === "leftAns") {
-    console.log("I win on the left");
+    console.log("WIN (left)");
     foundLeft = true;
   }
   else if (myId === "rightAns") {
-    console.log("I win on the right");
+    console.log("WIN (right)");
     foundRight = true;
   }
   else {
-    console.log("I am a terrible loser.")
+    console.log("Wrong")
   }
 
   if (foundLeft && foundRight) {
-    console.log("you win");
+    console.log("WIN (Next Level");
     score = score + 1;
     $(".score").text(score)
     foundRight = foundLeft = false;
