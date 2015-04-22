@@ -44,3 +44,13 @@
 	transform-origin: 100% 50%;
 }
 
+.score{
+	font-family: 'Fira Sans', sans-serif;
+	position: absolute;
+	top: 50%;
+	left: 49%;
+	font-size: 50;
+	text-align: left;
+	width: 500px;
+	
+}
