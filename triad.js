@@ -135,14 +135,14 @@ function clickHandler() {
   if (foundLeft && foundRight) {
     console.log("you win");
     score = score + 1;
+    $(".score").text(score)
     foundRight = foundLeft = false;
-    console.log("i sohuld reset tings");
+    console.log("reset things");
 
   }
 }
 
 $(function() {
-  //colorRand();
   makeColorWheel();
   colorize(arr,leftArr,rightArr,master);
   $('.circle').click(clickHandler);
