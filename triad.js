@@ -130,7 +130,8 @@ function clickHandler() {
   }
   else {
     console.log("Wrong")
-    myId.append("<i class='fa fa-times fa-3x'></i>");
+    //check so only one appears and CSS so centered
+    $(this).append("<i class='fa fa-times-circle fa-3x'></i>");
   }
 
   if (foundLeft && foundRight) {
