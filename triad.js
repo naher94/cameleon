@@ -130,6 +130,7 @@ function clickHandler() {
   }
   else {
     console.log("Wrong")
+    myId.append("<i class='fa fa-times fa-3x'></i>");
   }
 
   if (foundLeft && foundRight) {
