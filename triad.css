@@ -80,6 +80,7 @@
 	width:600px;
 	margin:auto;
 	margin-top: 0;
+	vertical-align: middle;
 }
 
 body{
@@ -91,8 +92,10 @@ body{
 	margin-top:10px;
 	padding-left:10px;
 	padding-right:10px;
+	float:right;
 }
 
+/*spacing between icons and title*/
 #triadicon{
 	padding-left: 40px;
 }
