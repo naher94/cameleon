@@ -11,8 +11,14 @@ var leftArr = new Array(16,17,18,19,0);
 var rightArr = new Array(10,11,12,13,14);
 var master = 5;
 
+function removeChecks()
+{
+  $(".circle").children().remove();//zombie?
+}
+
 function colorize(arr,leftArr,rightArr,master)
 {
+  removeChecks();
   var masterColor = colorRandNum();
   var triadArray = tinycolor(masterColor).triad();//returns array [original,left,right]
 
