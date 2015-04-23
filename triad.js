@@ -13,7 +13,8 @@ var master = 5;
 
 function removeChecks()
 {
-  $(".circle").children().remove();//zombie?
+  $(".circle").children().remove();
+  $(".circle").attr('id', '');
 }
 
 function colorize(arr,leftArr,rightArr,master)
