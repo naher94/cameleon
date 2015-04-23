@@ -11,18 +11,8 @@ var leftArr = new Array(16,17,18,19,0);
 var rightArr = new Array(10,11,12,13,14);
 var master = 5;
 
-
-function setThemAllToRed(arr,sel) {
-  for (var i = 0; i <= arr.length - 1; i++) 
-  {
-    if(isIn(i,sel))
-    {
-      $(arr[i]).children().css("background-color","#ff0000")
-    }
-  };
-}
-
-function colorize(arr,leftArr,rightArr,master){
+function colorize(arr,leftArr,rightArr,master)
+{
   var masterColor = colorRandNum();
   var triadArray = tinycolor(masterColor).triad();//returns array [original,left,right]
 
@@ -87,13 +77,15 @@ function colorize(arr,leftArr,rightArr,master){
 	return background;
 }*/
 
-function colorRandNum(){
+function colorRandNum()
+{
   var index = Math.floor((Math.random() * names.length));
   background = names[index][0];
   return background;
 }
 
-function makeColorWheel(){
+function makeColorWheel()
+{
 	var w = $('#wheel').width()
 	for (var i = 0; i <= arr.length - 1; i++) 
 	{
@@ -109,42 +101,52 @@ function makeColorWheel(){
 	};
 }
 
-function isIn (i,sel) {
+function isIn (i,sel) 
+{
 	for (var q = 0; q <= sel.length - 1; q++)
-	{ 
+  { 
 		if (sel[q]==i) {return true};
 	};
 	return false;
 }
 
-function clickHandler() {
+function clickHandler() 
+{
   var myId = $(this).attr("id")
 
-  if (myId === "leftAns") {
+  if (myId === "leftAns") 
+  {
     console.log("WIN (left)");
     foundLeft = true;
+    $(this).append("<i class='fa fa-check-circle fa-3x'></i>");//remove on colorize
+
   }
-  else if (myId === "rightAns") {
+  else if (myId === "rightAns") 
+  {
     console.log("WIN (right)");
     foundRight = true;
+    $(this).append("<i class='fa fa-check-circle fa-3x'></i>");//remove on colorize
   }
-  else {
+  else 
+  {
     console.log("Wrong")
-    //check so only one appears and CSS so centered
-    $(this).append("<i class='fa fa-times-circle fa-3x'></i>");
+    //check so only one appears and CSS so centered //DISABLE ON MASTER
+    $(this).append("<i class='fa fa-times-circle fa-3x'></i>");//remove on colorize
   }
 
-  if (foundLeft && foundRight) {
+  if (foundLeft && foundRight) 
+  {
     console.log("WIN (Next Level");
     score = score + 1;
     $(".score").text(score)
     foundRight = foundLeft = false;
-    console.log("reset things");
+    colorize(arr,leftArr,rightArr,master);
 
   }
 }
 
-$(function() {
+$(function() 
+{
   makeColorWheel();
   colorize(arr,leftArr,rightArr,master);
   $(".score").text(0);
