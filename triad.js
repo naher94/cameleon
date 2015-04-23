@@ -125,20 +125,20 @@ function clickHandler()
   {
     console.log("WIN (left)");
     foundLeft = true;
-    $(this).append("<i class='fa fa-check-circle fa-3x'></i>");//remove on colorize
+    $(this).append("<i class='fa fa-check-circle fa-3x'></i>");
 
   }
   else if (myId === "rightAns") 
   {
     console.log("WIN (right)");
     foundRight = true;
-    $(this).append("<i class='fa fa-check-circle fa-3x'></i>");//remove on colorize
+    $(this).append("<i class='fa fa-check-circle fa-3x'></i>");
   }
   else 
   {
     console.log("Wrong")
     //check so only one appears and CSS so centered //DISABLE ON MASTER
-    $(this).append("<i class='fa fa-times-circle fa-3x'></i>");//remove on colorize
+    $(this).append("<i class='fa fa-times-circle fa-3x'></i>");
   }
 
   if (foundLeft && foundRight) 
