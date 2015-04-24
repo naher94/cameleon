@@ -70,8 +70,10 @@ Main components
   color: #ffffff;
 }
 
+.cd-section:nth-of-type(3) { background-color: #ac92ed; /* purple */ }
 .cd-section:nth-of-type(4) { background-color: #ffce55; /* yellow */ }
-.cd-section:nth-of-type(6) { background-color: #4fc0e8; /* yellow */ }
+.cd-section:nth-of-type(5) { background-color: #fb6e52; /* orange */ }
+.cd-section:nth-of-type(6) { background-color: #4fc0e8; /* blue */ }
 
 
 .cd-section h1, .cd-section p {
