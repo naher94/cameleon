@@ -203,8 +203,8 @@ function clickHandler()
 $(function() 
 {
   makeColorWheel();
-  //colorizeTriad(arr,leftArr,rightArr,master);
-  colorizeComplement(arr,bottomArr,master);
+  colorizeTriad(arr,leftArr,rightArr,master);
+  //colorizeComplement(arr,bottomArr,master);
   $(".score").text(0);
   $('.circle').click(clickHandler);
 })
