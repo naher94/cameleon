@@ -1,19 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- Generator: Adobe Illustrator 16.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!-- Generator: Adobe Illustrator 17.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
 <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-	 width="125.729px" height="125.728px" viewBox="0 0 125.729 125.728" enable-background="new 0 0 125.729 125.728"
-	 xml:space="preserve">
+	 viewBox="-2 -2 129.728 129.728" enable-background="new -2 -2 129.728 129.728" xml:space="preserve">
+<g id="Layer_2_1_" display="none">
+	<rect x="-23" y="-4.333" display="inline" fill="#3F0729" stroke="#FFFFFF" stroke-miterlimit="10" width="202.5" height="156.5"/>
+</g>
 <g id="Layer_1">
-	<circle fill="#313131" cx="62.864" cy="62.864" r="62.864"/>
-</g>
-<g id="Layer_2">
-	<circle fill="#FFFFFF" cx="63.129" cy="13.071" r="7.2"/>
-</g>
-<g id="Layer_4" opacity="0.5">
-	<circle fill="#FFFFFF" cx="20.987" cy="87.999" r="7.2"/>
-	<circle fill="#FFFFFF" cx="104.122" cy="88.999" r="7.2"/>
-</g>
-<g id="Layer_3">
+	<g>
+		<g id="Layer_1_1_">
+			<circle fill="none" stroke="#FFFFFF" stroke-width="4" stroke-miterlimit="10" cx="62.864" cy="62.864" r="62.864"/>
+		</g>
+		<g id="Layer_2">
+			<circle fill="#FFFFFF" cx="63.129" cy="13.071" r="7.2"/>
+		</g>
+		<g>
+			<path fill="#FFFFFF" d="M20.987,83.799c2.316,0,4.2,1.884,4.2,4.2c0,2.316-1.884,4.2-4.2,4.2s-4.2-1.884-4.2-4.2
+				C16.787,85.683,18.671,83.799,20.987,83.799 M20.987,80.799c-3.976,0-7.2,3.224-7.2,7.2s3.224,7.2,7.2,7.2s7.2-3.224,7.2-7.2
+				S24.963,80.799,20.987,80.799L20.987,80.799z"/>
+		</g>
+		<g>
+			<path fill="#FFFFFF" d="M104.122,84.799c2.316,0,4.2,1.884,4.2,4.2c0,2.316-1.884,4.2-4.2,4.2s-4.2-1.884-4.2-4.2
+				C99.922,86.683,101.806,84.799,104.122,84.799 M104.122,81.799c-3.976,0-7.2,3.224-7.2,7.2s3.224,7.2,7.2,7.2s7.2-3.224,7.2-7.2
+				S108.098,81.799,104.122,81.799L104.122,81.799z"/>
+		</g>
+		<g id="Layer_3" display="none">
+		</g>
+	</g>
 </g>
 </svg>
