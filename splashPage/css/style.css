@@ -26,8 +26,12 @@ body, html {
 }
 
 a {
-  color: #6cbe45;
-  text-decoration: none;
+  color: white;
+  text-decoration: underline;
+}
+a:hover{
+  /*color: #666666;*/
+  font-weight: bold;
 }
 
 img {
@@ -347,5 +351,5 @@ Main components
 }
 
 .icon{
-  width: 60px;
+  width: 80px;
 }
