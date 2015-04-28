@@ -164,41 +164,42 @@ function isIn (i,sel)
 function clickHandler() 
 {
   var myId = $(this).attr("id")
+  if($(this).has('.notation').length === 0)
+  {
+    if (myId === "leftAns") 
+    {
+      console.log("WIN (left)");
+      score = score + 1;
+      $(".score").text(score)
+      foundLeft = true;
+      $(this).append("<img class='notation' src='check.svg'>");
 
-  if (myId === "leftAns") 
-  {
-    console.log("WIN (left)");
-    score = score + 1;
-    $(".score").text(score)
-    foundLeft = true;
-    $(this).append("<img class='notation' src='check.svg'>");
-
+    }
+    else if (myId === "rightAns") 
+    {
+      console.log("WIN (right)");
+      score = score + 1;
+      $(".score").text(score)
+      foundRight = true;
+      $(this).append("<img class='notation' src='check.svg'>");
+    }
+    else if (myId === "Ans")
+    {
+      console.log("WIN (Bottom)")
+      score = score + 1;
+      $(".score").text(score)
+      $(this).append("<img class='notation' src='check.svg'>");
+      colorizeComplement(arr,bottomArr,master)
+    }
+    else 
+    {
+      console.log("Wrong")
+      score = score - 1;
+      $(".score").text(score)
+      //check so only one appears and CSS so centered //DISABLE ON MASTER
+      $(this).append("<img class='notation' src='times.svg'>");
+    }
   }
-  else if (myId === "rightAns") 
-  {
-    console.log("WIN (right)");
-    score = score + 1;
-    $(".score").text(score)
-    foundRight = true;
-    $(this).append("<img class='notation' src='check.svg'>");
-  }
-  else if (myId === "Ans")
-  {
-    console.log("WIN (Bottom)")
-    score = score + 1;
-    $(".score").text(score)
-    $(this).append("<img class='notation' src='check.svg'>");
-    colorizeComplement(arr,bottomArr,master)
-  }
-  else 
-  {
-    console.log("Wrong")
-    score = score - 1;
-    $(".score").text(score)
-    //check so only one appears and CSS so centered //DISABLE ON MASTER
-    $(this).append("<img class='notation' src='times.svg'>");
-  }
-
   if (foundLeft && foundRight) 
   {
     console.log("WIN (Next Level");
