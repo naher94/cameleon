@@ -20,6 +20,14 @@ function removeChecks()
   $(".circle").attr('id', '');
 }
 
+function clearBoard()
+{
+  for (var i = 0; i <= arr.length - 1; i++) 
+  {
+    $(arr[i]).children().css("background-color","white");
+  };
+}
+
 function colorizeTriad(arr,leftArr,rightArr,master)
 {
   removeChecks();
@@ -156,14 +164,6 @@ function isIn (i,sel)
 function clickHandler() 
 {
   var myId = $(this).attr("id")
-  
-  //different rules
-  if (myId === "complementaryIcon") 
-  {
-    console.log("complementaryIcon");
-  }
-  
-
 
   if (myId === "leftAns") 
   {
@@ -207,6 +207,25 @@ function clickHandler()
 
   }
 }
+function iconClickHandler() 
+{
+  var myId = $(this).attr("id")
+  
+  //different rules
+  if (myId === "complementaryIcon") 
+  {
+    clearBoard();
+    colorizeComplement(arr,bottomArr,master);
+  }
+  if (myId === "compoundIcon") 
+  {
+    console.log("compoundIcon");
+  }
+  if (myId === "triadIcon") 
+  {
+    console.log("triadIcon");
+  }
+}
 
 $(function() 
 {
@@ -215,4 +234,5 @@ $(function()
   //colorizeComplement(arr,bottomArr,master);
   $(".score").text(0);
   $('.circle').click(clickHandler);
+  $('.icons').click(iconClickHandler);
 })
