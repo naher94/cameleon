@@ -156,6 +156,14 @@ function isIn (i,sel)
 function clickHandler() 
 {
   var myId = $(this).attr("id")
+  
+  //different rules
+  if (myId === "complementaryIcon") 
+  {
+    console.log("complementaryIcon");
+  }
+  
+
 
   if (myId === "leftAns") 
   {
