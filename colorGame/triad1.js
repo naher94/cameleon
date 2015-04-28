@@ -219,7 +219,8 @@ function iconClickHandler()
   }
   if (myId === "compoundIcon") 
   {
-    console.log("compoundIcon");
+    clearBoard();
+    colorizeTriad(arr,leftArr,rightArr,master);
   }
   if (myId === "triadIcon") 
   {
