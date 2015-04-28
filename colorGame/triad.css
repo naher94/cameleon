@@ -97,10 +97,6 @@ body{
 	padding-right:10px;
 	float:right;
 }
-/*spacing between icons and title*/
-#triadIcon{
-	padding-left: 40px;
-}
 
 .logo{
 	height: 40px;
@@ -117,4 +113,7 @@ footer{
 	font-size: 12;
 	width: 50%;
 	margin: auto;
+}
+.notation{
+	width: 50px;
 }

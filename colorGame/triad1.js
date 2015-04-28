@@ -171,7 +171,7 @@ function clickHandler()
     score = score + 1;
     $(".score").text(score)
     foundLeft = true;
-    $(this).append("<i class='fa fa-check-circle fa-3x'></i>");
+    $(this).append("<img class='notation' src='check.svg'>");
 
   }
   else if (myId === "rightAns") 
@@ -180,14 +180,14 @@ function clickHandler()
     score = score + 1;
     $(".score").text(score)
     foundRight = true;
-    $(this).append("<i class='fa fa-check-circle fa-3x'></i>");
+    $(this).append("<img class='notation' src='check.svg'>");
   }
   else if (myId === "Ans")
   {
     console.log("WIN (Bottom)")
     score = score + 1;
     $(".score").text(score)
-    $(this).append("<i class='fa fa-check-circle fa-3x'></i>");
+    $(this).append("<img class='notation' src='check.svg'>");
     colorizeComplement(arr,bottomArr,master)
   }
   else 
@@ -196,7 +196,7 @@ function clickHandler()
     score = score - 1;
     $(".score").text(score)
     //check so only one appears and CSS so centered //DISABLE ON MASTER
-    $(this).append("<i class='fa fa-times-circle fa-3x'></i>");
+    $(this).append("<img class='notation' src='times.svg'>");
   }
 
   if (foundLeft && foundRight) 
@@ -220,11 +220,11 @@ function iconClickHandler()
   if (myId === "compoundIcon") 
   {
     clearBoard();
-    colorizeTriad(arr,leftArr,rightArr,master);
   }
   if (myId === "triadIcon") 
   {
-    console.log("triadIcon");
+    clearBoard();
+    colorizeTriad(arr,leftArr,rightArr,master);
   }
 }
 
