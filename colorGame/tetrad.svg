@@ -5,16 +5,20 @@
 	 width="125.729px" height="125.729px" viewBox="0 0 125.729 125.729" enable-background="new 0 0 125.729 125.729"
 	 xml:space="preserve">
 <g id="Layer_1">
-	<circle fill="#313131" cx="62.865" cy="62.864" r="62.865"/>
+	<g id="Layer_1_1_">
+		<circle fill="#313131" cx="62.865" cy="62.865" r="62.865"/>
+	</g>
+	<g id="Layer_2">
+		<circle fill="#FFFFFF" cx="44.297" cy="18.682" r="7.2"/>
+	</g>
+	<g id="Layer_4" opacity="0.5">
+		<circle fill="#FFFFFF" cx="44.599" cy="106.815" r="7.2"/>
+	</g>
+	<g id="Layer_3">
+	</g>
+	<circle fill="#FFFFFF" cx="80.828" cy="18.682" r="7.2"/>
 </g>
-<g id="Layer_2">
-	<circle fill="#FFFFFF" cx="71.63" cy="13.748" r="7.2"/>
-</g>
-<g id="Layer_4" opacity="0.5">
-	<circle fill="#FFFFFF" cx="95.229" cy="30.682" r="7.2"/>
-	<circle fill="#FFFFFF" cx="98.297" cy="90.414" r="7.2"/>
-	<circle fill="#FFFFFF" cx="78.83" cy="109.747" r="7.2"/>
-</g>
-<g id="Layer_3">
+<g id="Layer_2_1_" opacity="0.5">
+	<circle fill="#FFFFFF" cx="81.13" cy="106.815" r="7.2"/>
 </g>
 </svg>
