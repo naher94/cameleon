@@ -285,6 +285,18 @@ function clickHandler()
     colorizeTetrad(arr,leftArr,rightArr,master);
   }
 }
+
+function SVG()
+{
+  var wWidth = $(window).width();
+  box1width = Math.random() * (wWidth)
+  box2width = Math.random() * (wWidth-box1width)
+  box3width = Math.random() * (wWidth-box2width)
+  <svg width=box1width height="100%" fill="red"></svg>
+  <svg width=box2width height="100%" fill="blue"></svg>
+  <svg width=box3width height="100%" fill="green"></svg>
+}
+
 function iconClickHandler() 
 {
   var myId = $(this).attr("id")
@@ -306,6 +318,10 @@ function iconClickHandler()
     clearBoard();
     triad = true;
     colorizeTriad(arr,leftArr,rightArr,master);
+  }
+  if (myId === "downloadIcon") 
+  {
+    SVG();
   }
 }
 
