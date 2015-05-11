@@ -30,8 +30,9 @@ function clearBoard()
   {
     $(arr[i]).children().css("background-color","white");
   };
-  $(arr[master1]).children().removeClass("shown")
-
+  $(arr[4]).children().removeClass("master")
+  $(arr[5]).children().removeClass("master")
+  $(arr[6]).children().removeClass("master")
 }
 
 function colorizeTriad(arr,leftArr,rightArr,master)
