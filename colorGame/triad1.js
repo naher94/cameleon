@@ -286,16 +286,16 @@ function clickHandler()
   }
 }
 
-function SVG()
+/*function SVG()
 {
   var wWidth = $(window).width();
-  box1width = Math.random() * (wWidth)
-  box2width = Math.random() * (wWidth-box1width)
-  box3width = Math.random() * (wWidth-box2width)
-  <svg width=box1width height="100%" fill="red"></svg>
-  <svg width=box2width height="100%" fill="blue"></svg>
-  <svg width=box3width height="100%" fill="green"></svg>
-}
+  box1width = (Math.random() * (wWidth)).toString()
+  box2width = (Math.random() * (wWidth-box1width)).toString()
+  box3width = (Math.random() * (wWidth-box2width)).toString()
+  <svg width=var(box1width) height="100%" fill="red"></svg>
+  <svg width=var(box2width) height="100%" fill="blue"></svg>
+  <svg width=var(box3width) height="100%" fill="green"></svg>
+}*/
 
 function iconClickHandler() 
 {
@@ -321,7 +321,7 @@ function iconClickHandler()
   }
   if (myId === "downloadIcon") 
   {
-    SVG();
+    //SVG();
   }
 }
 
