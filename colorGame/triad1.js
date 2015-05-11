@@ -10,7 +10,7 @@ var arr = new Array(20); //Makes array to house each of the rotation circles
 var sel = new Array(0,10,11,12,13,14,16,17,18,19);
 var leftArr = new Array(16,17,18,19,0);
 var rightArr = new Array(10,11,12,13,14);
-var master = 5;
+var master;
 /*VARS FOR TRIAD*/
 var bottomArr = new Array(13,14,15,16,17);
 
@@ -30,6 +30,7 @@ function clearBoard()
 
 function colorizeTriad(arr,leftArr,rightArr,master)
 {
+  var master = 5;
   removeChecks();
   var masterColor = colorRandNum();
   var triadArray = tinycolor(masterColor).triad();//returns array [original,left,right] //TRIAD ONLY
@@ -89,8 +90,73 @@ function colorizeTriad(arr,leftArr,rightArr,master)
   };
 }
 
+function colorizeTetrad(arr,leftArr,rightArr,master)
+{
+  var master = 4;
+  var master1 = 6; 
+  removeChecks();
+  var masterColor = colorRandNum();
+  var tetradArray = tinycolor(masterColor).tetrad();//returns array [original,master1,other,other]
+
+  //master
+  $(arr[master]).children().css ("background-color",masterColor)
+  $(arr[master]).children().addClass("master")
+  $(arr[master]).children().addClass("shown")
+
+  //master1
+  $(arr[master1]).children().css ("background-color",tetradArray[1])
+  $(arr[master1]).children().addClass("master")
+  $(arr[master1]).children().addClass("shown")
+
+  var left = tetradArray[2].toHexString(); //MODIFY FOR ALL COLOR RULES
+  var right = tetradArray[3].toHexString(); //MODIFY FOR ALL COLOR RULES
+
+  //Returns a random integer between min (inclusive) and max (exclusive)
+  var leftAnsIndex = Math.floor(Math.random() * leftArr.length);
+  var rightAnsIndex = Math.floor(Math.random() * rightArr.length);
+
+  $(arr[leftArr[leftAnsIndex]]).children().attr('id','leftAns');
+  $(arr[rightArr[rightAnsIndex]]).children().attr('id','rightAns');
+  $(arr[leftArr[leftAnsIndex]]).children().css("background-color",left);//16 - 19 & 0
+  $(arr[rightArr[rightAnsIndex]]).children().css("background-color",right);//10 - 14
+  $(arr[leftArr[leftAnsIndex]]).children().addClass("shown");
+  $(arr[rightArr[rightAnsIndex]]).children().addClass("shown");
+
+  var leftOther = [];
+  var rightOther = [];
+
+  for (var i = 0; i < leftArr.length-1; i++)
+  {
+    leftOther[i] = colorRandNum();
+    rightOther[i] = colorRandNum();
+  }
+
+  var counter = 0;//separate var to fix off by one when "if" is not executed
+  for (var i = 0; i<= leftArr.length; i++)
+  {
+    if (leftArr[leftAnsIndex] != leftArr[i]) 
+    {
+      $(arr[leftArr[i]]).children().css("background-color",leftOther[counter])
+      $(arr[leftArr[i]]).children().addClass("shown")
+      counter++;
+    }
+  };
+
+  counter = 0;
+  for (var i = 0; i<= rightArr.length; i++)
+  {
+    if (rightArr[rightAnsIndex] != rightArr[i]) 
+    {
+      $(arr[rightArr[i]]).children().css("background-color",rightOther[counter])
+      $(arr[rightArr[i]]).children().addClass("shown")
+      counter++;
+    }
+  };
+}
+
 function colorizeComplement(arr,bottomArr,master)
 {
+  var master = 5;
   removeChecks();
   var masterColor = colorRandNum();
   var complement = tinycolor(masterColor).complement();//returns the complement color
@@ -168,7 +234,7 @@ function clickHandler()
   {
     if (myId === "leftAns") 
     {
-      console.log("WIN (left)");
+      //console.log("WIN (left)");
       score = score + 1;
       $(".score").text(score)
       foundLeft = true;
@@ -177,7 +243,7 @@ function clickHandler()
     }
     else if (myId === "rightAns") 
     {
-      console.log("WIN (right)");
+      //console.log("WIN (right)");
       score = score + 1;
       $(".score").text(score)
       foundRight = true;
@@ -185,7 +251,7 @@ function clickHandler()
     }
     else if (myId === "Ans")
     {
-      console.log("WIN (Bottom)")
+      //console.log("WIN (Bottom)")
       score = score + 1;
       $(".score").text(score)
       $(this).append("<img class='notation' src='check.svg'>");
@@ -193,7 +259,7 @@ function clickHandler()
     }
     else 
     {
-      console.log("Wrong")
+      //console.log("Wrong")
       score = score - 1;
       $(".score").text(score)
       //check so only one appears and CSS so centered //DISABLE ON MASTER
@@ -202,7 +268,7 @@ function clickHandler()
   }
   if (foundLeft && foundRight) 
   {
-    console.log("WIN (Next Level");
+    //onsole.log("WIN (Next Level");
     foundRight = foundLeft = false;
     colorizeTriad(arr,leftArr,rightArr,master);
 
@@ -218,9 +284,10 @@ function iconClickHandler()
     clearBoard();
     colorizeComplement(arr,bottomArr,master);
   }
-  if (myId === "compoundIcon") 
+  if (myId === "tetradIcon") 
   {
     clearBoard();
+    colorizeTetrad(arr,bottomArr,master);
   }
   if (myId === "triadIcon") 
   {
@@ -232,7 +299,8 @@ function iconClickHandler()
 $(function() 
 {
   makeColorWheel();
-  colorizeTriad(arr,leftArr,rightArr,master);
+  //colorizeTriad(arr,leftArr,rightArr,master);
+  colorizeTetrad(arr,leftArr,rightArr,master);
   //colorizeComplement(arr,bottomArr,master);
   $(".score").text(0);
   $('.circle').click(clickHandler);

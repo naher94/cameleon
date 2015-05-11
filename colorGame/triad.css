@@ -9,8 +9,9 @@ body{
 }
 
 .circle {
-	display: none;	
+	display: none;
 }
+
 .circle.shown {
 	display: inherit;
 }
@@ -38,7 +39,6 @@ body{
   	top: 50%;
 	/*background-color: #313131;*/
 	float: left;
-
     -webkit-transform-origin: 100% 50%;
 	-moz-transform-origin: 100% 50%;
 	-ms-transform-origin: 100% 50%;
@@ -115,8 +115,6 @@ footer{
 	margin: auto;
 }
 .notation{
+	position: absolute;
 	width: 50px;
-	-ms-transform: rotate(0deg); /* IE 9 */
-    -webkit-transform: rotate(0deg); /* Safari */
-    transform: rotate(0deg);
-}
+
