@@ -11,6 +11,8 @@ var sel = new Array(0,10,11,12,13,14,16,17,18,19);
 var leftArr = new Array(16,17,18,19,0);
 var rightArr = new Array(10,11,12,13,14);
 var master;
+var master1;
+var master0;
 /*VARS FOR TRIAD*/
 var bottomArr = new Array(13,14,15,16,17);
 
@@ -26,6 +28,8 @@ function clearBoard()
   {
     $(arr[i]).children().css("background-color","white");
   };
+  $(arr[master1]).children().removeClass("shown")
+
 }
 
 function colorizeTriad(arr,leftArr,rightArr,master)
@@ -92,16 +96,16 @@ function colorizeTriad(arr,leftArr,rightArr,master)
 
 function colorizeTetrad(arr,leftArr,rightArr,master)
 {
-  var master = 4;
+  var master0 = 4;
   var master1 = 6; 
   removeChecks();
   var masterColor = colorRandNum();
   var tetradArray = tinycolor(masterColor).tetrad();//returns array [original,master1,other,other]
 
   //master
-  $(arr[master]).children().css ("background-color",masterColor)
-  $(arr[master]).children().addClass("master")
-  $(arr[master]).children().addClass("shown")
+  $(arr[master0]).children().css ("background-color",masterColor)
+  $(arr[master0]).children().addClass("master")
+  $(arr[master0]).children().addClass("shown")
 
   //master1
   $(arr[master1]).children().css ("background-color",tetradArray[1])
@@ -287,7 +291,7 @@ function iconClickHandler()
   if (myId === "tetradIcon") 
   {
     clearBoard();
-    colorizeTetrad(arr,bottomArr,master);
+    colorizeTetrad(arr,leftArr,rightArr,master);
   }
   if (myId === "triadIcon") 
   {
