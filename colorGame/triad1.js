@@ -297,6 +297,7 @@ function SVG()
   //<svg width=var(box3width) height="100%" fill="green"></svg>
 
   //append svg to
+  //using trianglfy? https://github.com/qrohlf/trianglify
 }
 
 function iconClickHandler() 
