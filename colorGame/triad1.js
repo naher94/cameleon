@@ -13,6 +13,8 @@ var rightArr = new Array(10,11,12,13,14);
 var master;
 var master1;
 var master0;
+var tetrad;
+var triad;
 /*VARS FOR TRIAD*/
 var bottomArr = new Array(13,14,15,16,17);
 
@@ -270,12 +272,16 @@ function clickHandler()
       $(this).append("<img class='notation' src='times.svg'>");
     }
   }
-  if (foundLeft && foundRight) 
+  if (foundLeft && foundRight && triad) 
   {
     //onsole.log("WIN (Next Level");
-    foundRight = foundLeft = false;
+    foundRight = foundLeft = triad = false;
     colorizeTriad(arr,leftArr,rightArr,master);
-
+  }
+  if (foundLeft && foundRight && tetrad) 
+  {
+    foundRight = foundLeft = tetrad = false;
+    colorizeTetrad(arr,leftArr,rightArr,master);
   }
 }
 function iconClickHandler() 
@@ -291,11 +297,13 @@ function iconClickHandler()
   if (myId === "tetradIcon") 
   {
     clearBoard();
+    tetrad = true;
     colorizeTetrad(arr,leftArr,rightArr,master);
   }
   if (myId === "triadIcon") 
   {
     clearBoard();
+    triad = true;
     colorizeTriad(arr,leftArr,rightArr,master);
   }
 }
@@ -303,8 +311,8 @@ function iconClickHandler()
 $(function() 
 {
   makeColorWheel();
-  //colorizeTriad(arr,leftArr,rightArr,master);
-  colorizeTetrad(arr,leftArr,rightArr,master);
+  colorizeTriad(arr,leftArr,rightArr,master);
+  //colorizeTetrad(arr,leftArr,rightArr,master);
   //colorizeComplement(arr,bottomArr,master);
   $(".score").text(0);
   $('.circle').click(clickHandler);
